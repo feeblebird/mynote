@@ -4,3 +4,8 @@
 > 
 > 所以叫循环神经网络
 # RNN类型
+* one to one
+* one to many
+* many to one
+* many to many
+image.png
