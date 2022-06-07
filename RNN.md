@@ -20,3 +20,4 @@
 
 # 其他
 * Elman RNN and Jordan RNN is simple recurrent network
+> [参考链接](https://en.wikipedia.org/wiki/Recurrent_neural_network)
