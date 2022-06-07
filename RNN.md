@@ -5,8 +5,6 @@
 > 所以叫循环神经网络
 # RNN类型
 * one to one
-
-![image.png](https://s2.loli.net/2022/06/07/Z2ajLwtCYfMzUlF.png)
 * one to many
 * many to one
 * many to many
