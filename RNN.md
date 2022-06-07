@@ -10,6 +10,9 @@
 * one to many
 * many to one
 * many to many
+> 这里看一下这个网址
+>
+> [链接](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks)
 # 存在问题
 * 存在梯度消失的问题
 * 梯度爆炸问题
