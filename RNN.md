@@ -17,3 +17,6 @@
 * 存在梯度消失的问题
 * 梯度爆炸问题
 > 这些问题的解决办法：LSTM
+
+# 其他
+* Elman RNN and Jordan RNN is simple recurrent network
