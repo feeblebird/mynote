@@ -14,3 +14,10 @@
 * become linear function, the ELU is easier to fit a nonlinear function, ELU is partly linear and nonlinear
 
 # GeLU
+
+
+# compare to ReLU
+
+# compare to LeakyReLU
+
+# compare to GeLU
