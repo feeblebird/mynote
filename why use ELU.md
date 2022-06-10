@@ -18,8 +18,10 @@
 
 # compare to ReLU
 * the mean of ELU closer to zero
+> 参考那个efficient propagation文献，更接近零，网络收敛速度更快
 * avoid the dead ReLU problem
 # compare to LeakyReLU
 * LeakyReLU is linear, ELU is partly nonlinear
+> 更好地拟合非线性函数
 # compare to GeLU
 * faster to compute
