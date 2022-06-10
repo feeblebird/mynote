@@ -20,8 +20,9 @@
     * 概率质量函数(probability mass function, PMF)
         > 是离散随机变量在特定取值上的概率P(x)，其总和为1。
         >
-        > 与概率密度函数f(x)不同，概率质量函数是对离散随机变量定义的。
+        > 与概率密度函数f(x)不同，概率质量函数是对离散随机变量定义的，本身就代表该值的概率，而概率密度函数在某一区间的积分才是概率。
     * 累计分布函数(cumulative distribution function, CDF)
+        > 定义为
 
 # compare to ReLU
 * the mean of ELU closer to zero
