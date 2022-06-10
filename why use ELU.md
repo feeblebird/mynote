@@ -25,7 +25,9 @@
         > 定义为F(x)=P(X≤x)，是单调递增的，且满足F(负无穷)=0和F(正无穷)=1。
         >
         > 对应于离散分布，他是所有小于等于x的值出现的概率之和。
-
+* 伯努利分布又称为两点分布或者0-1分布，我们记成功的概率为p，则失败的概率q=1-p，则
+    * 其概率质量函数(probability mass function, PMF)为
+        > ![image.png](https://s2.loli.net/2022/06/10/soP8rweh5WYvucq.png)
 # compare to ReLU
 * the mean of ELU closer to zero
 > 参考那个efficient propagation文献，更接近零，网络收敛速度更快
