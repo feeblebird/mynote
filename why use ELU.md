@@ -22,7 +22,9 @@
         >
         > 与概率密度函数f(x)不同，概率质量函数是对离散随机变量定义的，本身就代表该值的概率，而概率密度函数在某一区间的积分才是概率。
     * 累计分布函数(cumulative distribution function, CDF)
-        > 定义为
+        > 定义为F(x)=P(X≤x)，是单调递增的，且满足F(负无穷)=0和F(正无穷)=1。
+        >
+        > 对应于离散分布，他是所有小于等于x的值出现的概率之和。
 
 # compare to ReLU
 * the mean of ELU closer to zero
