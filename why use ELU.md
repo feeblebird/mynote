@@ -17,7 +17,9 @@
 
 
 # compare to ReLU
-
+* the mean of ELU closer to zero
+* avoid the dead ReLU problem
 # compare to LeakyReLU
-
+* LeakyReLU is linear, ELU is partly nonlinear
 # compare to GeLU
+* faster to compute
