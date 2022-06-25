@@ -15,3 +15,17 @@
 使用 \LaTex
 \end{document}
 ```
+> %是注释
+>
+> b5paper是设置纸张大小为b5
+>
+> begin{document}就是正文的开始
+* 文档部件
+> * 标题: \title, \author\, \date 
+    > 把这几个设置好之后，在正文使用\maketitle就生成了对应标题
+ * 摘要/前言: abstract 环境/\chapter*
+ * 目录: \tableofcontents(目录是自动生成的)
+ * 章节: \chapter, \section, ...
+ * 附录: \appendix + \chapter或\section ...
+ * 文献: \bibliography
+ * 索引: \printindex
