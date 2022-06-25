@@ -45,7 +45,7 @@
 >* 使用单独的类文件和格式文件设置格式
 >* 用小文件隔离复杂的图表(意思应该是用小文件表示复杂的图表)
 >> 相关命令：
->>* \documentclass:
->>* \usepackage:
->>* \include
->>* \input
+>>* \documentclass: 读入文档类文件(.cls)
+>>* \usepackage: 读入一个格式文件——宏包(.sty)
+>>* \include: 分页，并读入章节文件(.tex)
+>>* \input: 读入任意的文件
