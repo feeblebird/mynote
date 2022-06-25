@@ -33,3 +33,7 @@
 > * \frontmatter, \mainmatter, \backmatter
 > > 这么分的意义在于：
 > > 这三个部分的格式可能不统一，frontmatter的页码可能使用罗马数字，mainmatter可能重新开始用阿拉伯数字
+> * \appendix
+> > 一般的文档只需要区分一个正文和附录
+> * 章节层次表
+> > ![image.png](https://s2.loli.net/2022/06/25/7fKsJQcytF5TdSD.png)
