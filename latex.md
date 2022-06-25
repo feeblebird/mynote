@@ -29,3 +29,9 @@
 > * 附录: \appendix + \chapter或\section ...
 > * 文献: \bibliography
 > * 索引: \printindex
+* 文档划分
+> * \frontmatter, \mainmatter, \backmatter
+> 
+> 这么分的意义在于：
+>
+> 这三个部分的格式可能不统一，frontmatter的页码可能使用罗马数字，mainmatter可能重新开始用阿拉伯数字
