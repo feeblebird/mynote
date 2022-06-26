@@ -171,5 +171,29 @@ Hello world.
     * 普通符号，\infty(无穷)，\angle(角度)
     * 二元运算符，a+b, a-b, a点加b
     * 二元关系符，a=b, a≤b
-    * 括号, <a, b>, 使用\left, \right放大
+    * 括号，<a, b>, 使用\left, \right放大
+    > 大公式用大括号
     * 标点，逗号、分号(\colon)
+# amsmath和mathtools
+* amsmath是基本的数学工具包，在包含数学公式的文档中几乎无处不在。mathtools则对amsmath做了一些补充和增强。
+> 示例
+> ```latex
+> \documentclass{article}
+> \usepackage{amsmath}
+> \usepackage{mathtools}
+> 
+> \begin{document}
+> \begin{align*}
+> 2^5 &= (1+1)^5 \\
+> &= \begin{multlined}[t]
+> \binom50\cdot 1^5 + \binom51\cdot 1^4 \cdot 1
+> + \binom52\cdot 1^3 \cdot 1^2 \\
+> + \binom53\cdot 1^2 \cdot 1^3
+> + \binom54\cdot 1 \cdot 1^4 + \binom55\cdot 1^5
+> \end{multlined} \\
+> &= \binom50 + \binom51 + \binom52 + \binom53
+> + \binom54 + \binom55
+> \end{align*}
+> 
+> \end{document}
+> ```
