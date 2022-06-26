@@ -382,3 +382,85 @@ Hello world.
 \end{document}
 ```
 ![image.png](https://s2.loli.net/2022/06/26/R4kUilBcdVHaJwL.png)
+# 格式控制功能
+* 字体
+> * \rmfamily, \textrm{...}
+> * \sffamily, \textsf{...}
+> * \ttfamily, \texttt{...}
+* 字号
+> `\Huge, \LARGE, \Large, \large, \normalsize, \small, \footnotesize, \scriptsize, \tiny`
+* 中文字号
+> `\zihao{5}, \zihao{-3}`
+* 对齐
+> `\centering, \raggedleft, \raggedright`
+>
+> 分别为居中、左对齐、右对齐，默认是两端对齐
+* 空白间距
+> `\hspace{2cm}, \vspace{3mm}
+>
+> 水平空格2cm，垂直空格3mm
+* 版面布局
+> `geometry`宏包，设置纸张大小，版心的大小
+>
+> `fancyhdr`宏包，设置章节标题、页码、页眉、也叫的格式
+* 分页断行
+> `\linebreak, \\`
+> 
+> `\\`只在画表格的时候用，写正文的时候从来不用
+>
+> `\pagebreak, \newpage, \clearpage, \cleardoublepage`
+* 盒子
+> `mbox{内容}`，只占一行的盒子
+>
+> `\parbox{4em}{内容|}, minipage`，占多行的盒子
+# 格式应用于文档
+> 如果预定义的格式不符合需要，就需要设置修改。经常文档作者本人就是格式设计者，此时更应该主义不要把格式和内容混在一起。
+>
+> 直接设置相关参数。如设置`\parindent`（设置段首缩进量，`parskip`（两段之间的垂直间距），`\linespread`（设置行间距，默认一倍行距），`\pagestyle`（设置有无页眉页脚等）。
+>
+> 修改部分命令的定义。如`\thesection, \labelenumi, \descriptionlabel, \figurename`。
+>
+> 利用工具宏包完成设置。如使用`ctex`宏包设置中文格式，使用`tocloft`宏包设置目录格式。
+# 自定义的命令和环境
+* 对于LaTex没有直接提供的格式，可以使用自定义的命令和环境实现语义的接口
+> 例如，为程序名称定义一个命令：
+>
+> `\newcommand\prg[1]{\textsf{#1}}`，定义这个新命令，使用无衬线字体显示。这样如果想改成都用蓝色字体显示的话就会很方便。
+>
+> `prg`是新命令的名字，下面为示例
+> ```latex
+> \documentclass{article}
+> \usepackage{xeCJK}
+> \newcommand\prg[1]{\textsf{#1}}
+> % #1的意思就是说第一个参数
+> \begin{document}
+> 程序\prg{sort}很有用。
+> \end{document}
+> ```
+> ![image.png](https://s2.loli.net/2022/06/26/4yfmXRDAnS9OF6l.png)
+> 
+> 如果我们想改一下显示效果，则直接修改即可
+> ```latex
+> \documentclass{article}
+> \usepackage{xeCJK}
+> \newcommand\prg[1]{\textbf{\Huge #1}}
+> \begin{document}
+> 程序\prg{sort}很有用。
+> \end{document}
+> ```
+> ![image.png](https://s2.loli.net/2022/06/26/nJgYytoIDawR7xu.png)
+>
+> **各种直接修改输出格式的命令，如字体、字号、对齐、间距的命令，都应该放在文档格式设置或自定义的命令、环境中，而避免在正文中直接使用。**
+# 章节标题
+* `ctex`宏包及文档类，用`\ctexset`定制。西文用`titlesec`等。
+# 浮动标题
+* `caption`宏包
+# 列表环境
+* `enumitem`宏包
+> ```latex
+> \usepackage{enumitem}
+> \setlist{nosep}
+> ```
+> 将中文列表设置为普通正文的行间距
+>
+> ![image.png](https://s2.loli.net/2022/06/26/5E6mcs9SgevVNXA.png)
