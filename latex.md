@@ -79,6 +79,17 @@ Hello world.
 > 参数总在后面花括号表示，用中括号表示可选参数
 > \cmd{arg1}{arg2}
 > \cmd[opt]{arg1}{arg2}
-> LaTex的分数，1/2:
+> LaTex的分数，1/2:fraction
 > \frac{1}{2}
+> Tex的分数，1/2:
 > 1 \over 2
+> 第二种这种写法一般不用，因为不好表达复杂的分式
+* 环境
+> 环境是一种特殊的命令
+> ```latex
+> \begin{env}
+> ...
+> \end{env}
+> LaTex的矩阵就是一种环境，
+> \begin{matrix} ... \\ ... end{matrix}
+> 上面这是一个两行的矩阵，\\为换行命令
