@@ -96,6 +96,7 @@ Hello world.
 > \begin{env}
 > ...
 > \end{env}
+> ```
 > LaTex的矩阵就是一种环境，
 > \begin{matrix} ... \\ ... end{matrix}
 > 上面这是一个两行的矩阵，\\为换行命令
