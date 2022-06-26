@@ -140,3 +140,9 @@ Hello world.
 > \# \$ \% \& \{ \} \textbackslash
 > ```
 > \# $ % & { } \
+* 键盘上没有的符号用命令输入。
+> ```latex
+> \S \dag \ddag \P \copyright
+> \textbullet \textregistered
+> \texttrademark \pounds
+> ```
