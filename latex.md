@@ -223,8 +223,44 @@ Hello world.
 > `\hline`是上下各加了一个横线
 # 列表环境
 * enumerate 编号
->
+> ```latex
+> \documentclass{article}
+> 
+> \begin{document}
+> \begin{enumerate}
+> 	\item aaa
+> 	\item bbb
+> 	\item ccc
+> \end{enumerate}
+> \end{document}
+> ```
+> ![image.png](https://s2.loli.net/2022/06/26/EGvtqFdAXz2ksOR.png)
 * itemize 不编号
-> 
 * description 有标题
-> 
+# 定理类环境
+* `\newtheorem`定义定理类环境，如
+> `\newtheorem{thm}{定理}[section]
+* 使用定理类环境，如
+> ```latex
+> \begin{thm}
+> 一个定理
+> \end{thm}
+> ```
+> ![image.png](https://s2.loli.net/2022/06/26/CSotNGHPjxqFwr5.png)
+# 引文
+* quote
+* quotation
+# 抄录代码
+* `\verb`命令，如
+> `\verb|#include <stdio.h>|
+> ![image.png](https://s2.loli.net/2022/06/26/hLH9MGkVBWyfKs6.png)
+* `verbatim`环境，如
+> ```latex
+> \begin{verbatim}
+> #include <stdio.h>
+> int main(){
+>     print("hello world.");
+> }
+> \end{verbatim}
+> ```
+> ![image.png](https://s2.loli.net/2022/06/26/rLobI25fiYeQwAu.png)
