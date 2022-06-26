@@ -1,3 +1,5 @@
+[doc]
+
 # cmd调出符号文档
 * 命令为:
 > texdoc symbols
@@ -318,8 +320,12 @@ Hello world.
 >
 > 第一个是是画**三线表**的；
 > 第二个是斜线宏包
+> 
 > ![image.png](https://s2.loli.net/2022/06/26/WI1wC2hlBtn7ODx.png)
 * 表列格式
 > `array`
 * 综合应用
 > `tabu`
+# 插图
+* 使用`graphicx`宏包提供的`\includegraphics`命令
+> `\includegraphics[width=2cm]{pkulogo.pdf}
