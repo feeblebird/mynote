@@ -219,3 +219,12 @@ Hello world.
 > \hline
 > \end{tabular}
 > ```
+> ![image.png](https://s2.loli.net/2022/06/26/Bqon3by6agzI4GC.png)
+> `\hline`是上下各加了一个横线
+# 列表环境
+* enumerate 编号
+>
+* itemize 不编号
+> 
+* description 有标题
+> 
