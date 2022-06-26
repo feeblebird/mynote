@@ -364,4 +364,21 @@ Hello world.
 * `batbib`宏包支持作者，年的格式
 * 利用`custom-bib`产生定制的格式文件
 * `biblatex`+`Biber`文献处理的新方式
-# 
+# 设计文档格式
+* 为了做到格式与内容分离，要做到只是用与内容相关的命令和环境。
+> 比如强调一个词时，推荐使用
+> `\emph{important}`
+> 不推荐使用`\textit{important}
+> 因为后者就把格式固定死了，为斜体。那么就可能不符合论文要求，而前者会根据不同的模板显示不同的效果。
+# 使用宏包定制格式
+* `forest`宏包
+```latex
+\documentclass{article}
+\usepackage{forest}
+\begin{document}
+	\begin{forest}
+		[A [B [TT [BB] [C]]] [SS [D] [D] [E]]]
+	\end{forest}
+\end{document}
+```
+![image.png](https://s2.loli.net/2022/06/26/R4kUilBcdVHaJwL.png)
