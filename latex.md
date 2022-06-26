@@ -114,5 +114,17 @@ Hello world.
 > 
 > 命令也可以是直接输出某种结构；也可以改变一个状态，此时LaTex用花括号{}分组或环境作为状态改变的作用域。
 > 例如\em abc改变字体以强调一些文字，得到abc；
+> em为emphasize的缩写，将abc变为斜体
 > 
 > 而带参数的命令\emph{abc}可得到同样的效果。
+* 环境
+> 环境的格式为
+> ```latex
+> \begin{env}
+> 环境的内容
+> \end{env}
+> % 比如右对齐
+> \begin{flushright}
+> 文字
+> \end{flushright}
+> ```
