@@ -49,3 +49,11 @@
 >>* \usepackage: 读入一个格式文件——宏包(.sty)
 >>* \include: 分页，并读入章节文件(.tex)
 >>* \input: 读入任意的文件
+# 填写文档内容
+* hello world
+```latex
+\documentclass{article}
+\begin{document}
+Hello world.
+\end{document}
+```
