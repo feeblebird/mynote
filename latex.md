@@ -52,8 +52,33 @@
 # 填写文档内容
 * hello world
 ```latex
+% 英文
 \documentclass{article}
 \begin{document}
 Hello world.
 \end{document}
+
+% 中文
+% ctexart意思是chinese tex article
+\documentclass{ctexart}
+\begin{document}
+你今天吃了吗？
+\end{document}
 ```
+![image.png](https://s2.loli.net/2022/06/26/OCMpf3ykoRY8nLF.png)
+> 如果使用pdflatex编译中文文档，那么需要指出我们使用的编码为utf-8编码
+> ```latex
+> \documentclass[UTF8]{ctexart}
+> \begin{document}
+> 今天你吃了吗？
+> \end{document}
+> ```
+> 而XeLaTex一定是utf-8编码
+# 语法结构
+* 命令
+> 参数总在后面花括号表示，用中括号表示可选参数
+> \cmd{arg1}{arg2}
+> \cmd[opt]{arg1}{arg2}
+> LaTex的分数，1/2:
+> \frac{1}{2}
+> 1 \over 2
