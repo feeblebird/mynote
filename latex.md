@@ -203,8 +203,19 @@ Hello world.
 > `&=`让多个等号对齐
 # 科技功能
 * siunitx: 数字单位的一揽子解决方案
+> ```latex
 > `\num{-1.235e96} \\
 > \SI{299792458}{m/s} \\
 > \SI{2×7×3.5}{m}
+> ```
 > ![image.png](https://s2.loli.net/2022/06/26/gANLEvn6akKTfYI.png)
 > 第一个科学计数法；第二个需要用千分符，大概半个空格那么宽；
+> 
+> 数字个位对齐
+> ```latex
+> begin{tabular}{|S|}
+> \hline
+> -234531 \\ 13.55 \\ .9e37km \\
+> \hline
+> \end{tabular}
+> ```
