@@ -143,6 +143,16 @@ Hello world.
 * 键盘上没有的符号用命令输入。
 > ```latex
 > \S \dag \ddag \P \copyright
+> % dag为分节符
 > \textbullet \textregistered
 > \texttrademark \pounds
 > ```
+* 更多的符号需要使用符号字体包。（看symbols文档）
+# 公式
+* 数学模式下字体、符号、间距与正文都不同，一切数学公式（包括单个符号n, π）都要在数学模式下输入。
+* 行内（inline）公式：
+> 使用一对符号$$来表示。如$a+b=c$
+* 显示（display）公式：
+> * 简单的不编号公式用命令\[和\]表示。（不要使用双美元符号$$ $$）
+> * 基本的编号的公式用equation环境。
+> * 更复杂的结构，使用amsmath宏包提供的专门的数学环境。（不要使用eqnarray环境）
