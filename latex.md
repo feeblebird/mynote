@@ -327,3 +327,41 @@ Hello world.
 # 插图
 * 使用`graphicx`宏包提供的`\includegraphics`命令
 > `\includegraphics[width=2cm]{pkulogo.pdf}
+# 代码画图
+* 优先使用外部工具画图，特别是可视化工具，例如一般的矢量图用`Inkscape`, `Illustrator(收费)`甚至`PowerPoint(保存为pdf格式)`，数学图形用`MATLAB`, `matplotlib`之类。
+* 如果有合适的宏包，某些特定类型的图形也可以用LaTex代码作图。现代LaTex绘图宏包很多基于`TikZ`。
+# 浮动体
+* 图表都要额外地再塞到一个环境中
+> 插入的一幅图或者一个表格在LaTex中其实默认是按照一个字符来使用的，就相当于一个很大的方块，它会随着文本的移动而移动，但是我们有时不希望这样。
+> 
+> ![image.png](https://s2.loli.net/2022/06/26/ZfgL8TxqF61sSAJ.png)
+* `figure`环境, `table`环境
+* 其他环境可以使用`float`宏包得到
+> 浮动体的标题用`\caption`命令得到，自动编号
+# 自动化工具
+* 目录
+> 需要编译两次
+* 交叉引用
+> 需要编译两次
+* PDF的链接和书签
+> `hyperref`宏包来实现
+> 
+> `hyperref`产生链接和书签的原理与普通的交叉引用相同。`hyperref`会在PDF中写入相应的“锚点”代码，在其他地方引用。交叉引用的代码并入`.aux`文件，目录的的代码并入`.toc`文件，PDF书签则产生单独的`.out`文件。
+# BiBTex的使用
+```latex
+\bibliographystyle{plain}
+% 写参考文献的格式是什么，plain表示最普通的格式
+```
+> 文章中的引用通过`\cite{name}`命令引用
+>
+> 在文章末尾通过`bibliography{}`输出参考文献列表
+>
+> 排版的时候，先用bibtex编译一下，在用xelatex编译两下就可以了。
+> 
+> 也有一键排版的工具，名字好像是`latexmk`
+# 参考文献格式设置
+* 选用合适的`.bst`格式，比如`plainnat`, `gbt7714-plain`。
+* `batbib`宏包支持作者，年的格式
+* 利用`custom-bib`产生定制的格式文件
+* `biblatex`+`Biber`文献处理的新方式
+# 
