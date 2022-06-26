@@ -264,3 +264,62 @@ Hello world.
 > \end{verbatim}
 > ```
 > ![image.png](https://s2.loli.net/2022/06/26/rLobI25fiYeQwAu.png)
+* 使用listings宏包（带语法高亮）
+> 设置起来比较麻烦
+* minted宏包（调用python的Pygment）
+# 算法结构（伪代码）
+* clrscode宏包（算法导论）
+> cmd里`texdoc clrscode`查询文档
+* algorithm2e宏包
+* algorithmicx宏包的algpseudocode格式
+# 图表与浮动环境
+* 使用tabular环境画表格
+> ```latex
+> \documentclass{article}
+> \usepackage{xeCJK}
+> \begin{document}
+> 	
+> 	\begin{tabular}[UTF8]{|rr|}
+> 		\hline
+> 		输入 & 输出 \\
+> 		\hline
+> 		$-2$ & 4 \\
+> 		0 & 0 \\
+> 		2 & 4 \\
+> 		\hline
+> 	\end{tabular}	
+> 
+> \end{document}
+> ```
+> 因为要输出中文，所以要把编译器切换为XeLaTex，然后又报错了，又要加上`\usepackage{XeCJK}`才可以
+> `{|rr|}`生成表格竖线
+> 可以使用一些工具生成表格代码，例如
+> `https://www.tablesgenerator.com/latex_tables
+# 功能各异的表格宏包
+* 单元格处理
+> `multirow`, `makecell`
+>
+> 前者是合并单元格，后者是拆分单元格
+* 长表格
+> `longtable`, `xtab` 
+>
+> 前者用地多一些，后者用地少一些
+>
+> 如果表格的内容很长，如果不使用宏包，则
+> 表格不会自动换行。
+* 定宽表格
+> `xtabular`
+>
+> 用地比较少，这里的定宽**不是**说单元格的宽度，而是确定了表格的宽度。内容长了就自动换行。
+* 表线控制
+> `booktabs`, `diagbox`, `arydshln`
+>
+> 前两个是常用的
+>
+> 第一个是是画**三线表**的；
+> 第二个是斜线宏包
+> ![image.png](https://s2.loli.net/2022/06/26/WI1wC2hlBtn7ODx.png)
+* 表列格式
+> `array`
+* 综合应用
+> `tabu`
