@@ -186,14 +186,18 @@ Hello world.
 > \begin{align*}
 > 2^5 &= (1+1)^5 \\
 > &= \begin{multlined}[t]
-> \binom50\cdot 1^5 + \binom51\cdot 1^4 \cdot 1
-> + \binom52\cdot 1^3 \cdot 1^2 \\
-> + \binom53\cdot 1^2 \cdot 1^3
-> + \binom54\cdot 1 \cdot 1^4 + \binom55\cdot 1^5
+> \binom{5}{0} \cdot{1^5} + \binom{5}{1} \cdot{1^4} \cdot{1}
+> + \binom{5}{2} \cdot{1^3} \cdot{1^2} \\
+> + \binom{5}{3} \cdot{1^2} \cdot{1^3}
+> + \binom{5}{4} \cdot{1} \cdot{1^4} + \binom{5}{5} \cdot{1^5}
 > \end{multlined} \\
-> &= \binom50 + \binom51 + \binom52 + \binom53
-> + \binom54 + \binom55
+> &= \binom{5}{0} + \binom{5}{1} + \binom{5}{2} + \binom{5}{3}
+> + \binom{5}{4} + \binom{5}{5}
 > \end{align*}
 > 
 > \end{document}
 > ```
+> ![image.png](https://s2.loli.net/2022/06/26/NeHWdkuz5g4YQmS.png)
+> `multlined`环境应该是多行显示的时候有缩进
+>
+> `&=`让多个等号对齐
