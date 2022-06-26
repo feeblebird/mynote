@@ -166,3 +166,10 @@ Hello world.
 > \sqrt[次数]{根号下}
 * 矩阵
 > 使用amsmath宏包提供的专门的矩阵环境matrix, pmatrix, bmatrix等。特别复杂的矩阵（如带线条）使用array环境作为表格画出。
+* 数学符号
+    * 数学字母a, b, α，数学字体\mathbb(实数R)、\mathcal等
+    * 普通符号，\infty(无穷)，\angle(角度)
+    * 二元运算符，a+b, a-b, a点加b
+    * 二元关系符，a=b, a≤b
+    * 括号, <a, b>, 使用\left, \right放大
+    * 标点，逗号、分号(\colon)
