@@ -156,3 +156,13 @@ Hello world.
 > * 简单的不编号公式用命令\[和\]表示。（不要使用双美元符号`$$ $$`）
 > * 基本的编号的公式用equation环境。
 > * 更复杂的结构，使用amsmath宏包提供的专门的数学环境。（不要使用eqnarray环境）
+* 上标与下标
+> ^ 和 _ 表示
+* 上下画线与花括号
+> \overline, \underline, \overbrace, \underbrace
+* 分式
+> \frac{分子}{分母}
+* 根式
+> \sqrt[次数]{根号下}
+* 矩阵
+> 使用amsmath宏包提供的专门的矩阵环境matrix, pmatrix, bmatrix等。特别复杂的矩阵（如带线条）使用array环境作为表格画出。
