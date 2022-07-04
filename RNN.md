@@ -22,7 +22,7 @@
 * Elman RNN and Jordan RNN is simple recurrent network
 > [参考链接](https://en.wikipedia.org/wiki/Recurrent_neural_network)
 
-# RNN architecture
+# RNN architecture(记忆单元分类，记忆单元存储过去的信息)
 * 主要存在三种类型的RNN
     * Vanilla RNN
     > 简单地用前一个状态的状态信息和当前状态的输入来声称当前状态的状态信息
