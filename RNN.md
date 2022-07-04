@@ -44,4 +44,8 @@
 * 相比于DNN，考虑了历史信息
 # pytorch RNN
 * 这个RNN可以实现一个简单的Elman RNN
-* 
+* RNN的公式
+> ![image.png](https://s2.loli.net/2022/07/04/S68WRq9Eeldw5xu.png)
+# feedforward and backpropagation
+* feedforward是neural network的类型，而backpropagation是优化算法。
+* [具体网址](https://stackoverflow.com/questions/28403782/what-is-the-difference-between-back-propagation-and-feed-forward-neural-network)
