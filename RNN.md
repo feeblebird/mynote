@@ -50,3 +50,9 @@
 # feedforward and backpropagation
 * feedforward是neural network的类型，而backpropagation是优化算法。
 * [具体网址](https://stackoverflow.com/questions/28403782/what-is-the-difference-between-back-propagation-and-feed-forward-neural-network)
+# RNN存在的问题
+* Vanishing Gradient Problem
+> 反向传播计算梯度时，
+* Exploding Gradient Problem
+* Long Term Dependency Issue
+> 
