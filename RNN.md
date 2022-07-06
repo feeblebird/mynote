@@ -52,7 +52,8 @@
 * [具体网址](https://stackoverflow.com/questions/28403782/what-is-the-difference-between-back-propagation-and-feed-forward-neural-network)
 # RNN存在的问题
 * Vanishing Gradient Problem
-> 反向传播计算梯度时，
+> RNN中反向传播与feedforward神经网络反向传播的概念上有些区别:
+>   * 
 * Exploding Gradient Problem
 * Long Term Dependency Issue
 > 
