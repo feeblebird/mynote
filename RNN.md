@@ -53,7 +53,7 @@
 # RNN存在的问题
 * Vanishing Gradient Problem
 > RNN中反向传播与feedforward神经网络反向传播的概念上有些区别:
->   * 
+>   * 在feedforward神经网络中，我们的前向传播是一个一个神经元进行传播的，而在RNN中，前向传播是一个一个时间点进行传播的
 * Exploding Gradient Problem
 * Long Term Dependency Issue
 > 
