@@ -56,6 +56,8 @@
 >   * 在feedforward神经网络中，我们的前向传播是一个一个神经元进行传播的，而在RNN中，前向传播是一个一个时间点进行传播的
 >   * 可以计算error function at each time point
 >   > basically, during the training, your cost  function compares your outcomes (red circles on the image below) to your desired output
+>   > 
+>   > ![image.png](https://s2.loli.net/2022/07/06/CedFpPmLXzRnuEs.png)
 * Exploding Gradient Problem
 * Long Term Dependency Issue
 > 
