@@ -36,6 +36,7 @@
 * 三种类别
     * 单向循环
     * 双向循环
+    > ![image.png](https://s2.loli.net/2022/07/06/VvcyJSBnoDzw1Gs.png)
     * 多层单向或双向叠加(Deep RNN)
 # RNN优点
 * RNN每个时刻的权重都是相同的，这样才能够处理变长序列
