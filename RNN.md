@@ -189,7 +189,7 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 ## input gate
 ![image.png](https://s2.loli.net/2022/07/07/AHjry7bJa82Lq5B.png)
 * The input gate performs the following operations to update the cell status.
-
-First, the current state X(t) and previously hidden state h(t-1) are passed into the second sigmoid function. The values are transformed between 0 (important) and 1 (not-important).
-
-Next, the same information of the hidden state and current state will be passed through the tanh function. To regulate the network, the tanh operator will create a vector (C~(t) ) with all the possible values between -1 and 1. The output values generated form the activation functions are ready for point-by-point multiplication.
+  
+  First, the current state X(t) and previously hidden state h(t-1) are passed into the second sigmoid function. The values are transformed between 0 (important) and 1 (not-important).
+  
+  Next, the same information of the hidden state and current state will be passed through the tanh function. To regulate the network, the tanh operator will create a vector (C~(t) ) with all the possible values between -1 and 1. The output values generated form the activation functions are ready for point-by-point multiplication.
