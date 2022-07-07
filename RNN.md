@@ -230,4 +230,6 @@ To conclude, the forget gate determines which relevant information from the prio
 >
 > 下标是t-1的就是我们使用LSTM时需要设置的初始状态
 > , RNN中我们需要设置h(0)，LSTM中我们还需要设置c(0)
-> 
+## lstmp
+* pytorch的lstm的初始化参数中有一个参数是`proj_size`
+    > 如果这个参数的值大于零，那么lstm就变成了lstmp，因为lstm的计算量太大了，所以lstmp对减少了计算量，它对h(t)的计算进行了压缩
