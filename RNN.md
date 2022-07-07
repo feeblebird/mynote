@@ -78,4 +78,88 @@
     >
     > handle long-term dependencies.
 
-# Long-short-term-memory(LSTM)
+# 单向简单rnn和双向简单rnn的代码实现
+```python
+import torch
+import torch.nn as nn
+
+batch_size, T = 2, 3 # 批量大小，序列长度(比如时间序列的长度)
+input_size, hidden_size = 2, 3 # 输入特征大小，隐含层特征大小
+input = torch.randn(batch_size, T, input_size) # 随机初始化一个输入特征序列
+h_prev = torch.zeros(batch_size, hidden_size) # 初始隐含状态
+
+# step1 调用pytorch rnn api
+rnn = nn.RNN(input_size, hidden_size, batch_first=True)
+rnn_output, state_final= rnn(input, h_prev.unsqueeze(0))
+print(rnn_output)
+print(state_final)
+
+# step2 手写一个rnn_forward函数，实现单向RNN的计算原理
+def rnn_forward(input, weight_ih, weight_hh, bias_ih, bias_hh, h_prev):
+    bs, T, input_size = input.shape
+    h_size = weight_ih.shape[0]
+    # 这里的公式是xt W_ih的转置
+    # 这里公式的输出是t时刻的隐藏状态ht，这里ht的形状应该是(batch_size, hidden_size)
+    # 所以如果按照公式xt W_ih的转置来说，想知道hidden_size的话，xt的形状为t时刻input的形状(batch_size, input_size)
+    # 那么hidden_size的形状即为W_ih转置的shape[1]，即为W_ih的shape[0]
+    # W_ih的shape为(hidden_size, input_size)
+    h_out = torch.zeros(batch_size, T, h_size) # 初始化一个状态矩阵，即各个隐藏状态的输出
+    
+    for t in range(T):
+        x = input[:, t, :] #获取当前时刻输入特征
+        x_times_wt = torch.mm(x, weight_ih.transpose(0, 1)) # x_times_wt的shape为(batch_size, hidden_size)
+        h_times_whht = torch.mm(h_prev, weight_hh.transpose(0, 1)) 
+        # h_prev的shape为(batch_size, hidden_size), weight_hh的shape为(hidden_size, hidden_size), x_times_whht的shape为(batch_size, hidden_size)
+        h_prev = torch.tanh(x_times_wt + bias_ih + h_times_whht + bias_hh)
+        # 要进行递归运算
+        
+        h_out[:, t, :] = h_prev
+        
+    return h_out, h_prev.unsqueeze(0)
+
+# 验证rnn_forward的正确性
+# 从torch的rnn中找出我们验证所需的参数
+for name, parameter in rnn.named_parameters():
+    print(name)
+    print(parameter)
+# 参数中l0的意思是第0层，即第1层
+
+custom_rnn_output, custom_state_final = rnn_forward(input, rnn.weight_ih_l0, rnn.weight_hh_l0, rnn.bias_ih_l0, rnn.bias_hh_l0, h_prev)
+print(custom_rnn_output)
+print(custom_state_final)
+
+# step3 手写一个bidirectional_rnn_forward函数，实现双向RNN的计算原理
+def bidirectional_rnn_forward(input, weight_ih, weight_hh, bias_ih, bias_hh, h_prev, \
+                             weight_ih_reverse, weight_hh_reverse, bias_ih_reverse, bias_hh_reverse, h_prev_reverse):
+    batch_size, T, input_size = input.shape
+    h_size = weight_ih.shape[0]
+    h_out = torch.zeros(batch_size, T, h_size*2) # 初始化一个状态矩阵，注意双向是两倍的特征大小，两倍的hidden_size
+    
+    forward_output = rnn_forward(input, weight_ih, weight_hh, bias_ih, bias_hh, h_prev)[0]
+    backward_output = rnn_forward(torch.flip(input, [1]), weight_ih_reverse, weight_hh_reverse, bias_ih_reverse, bias_hh_reverse, h_prev_reverse)[0]
+    # 这里input需要进行翻转，就是时间靠后的在前面，所以需要对input的t维度即第二个维度进行翻转
+    
+    h_out[:, :, :h_size] = forward_output
+    h_out[:, :, h_size:] = backward_output
+    # forward_output和backward_output都是经过rnn_forward函数拼接过的
+    
+    return h_out, h_out[:, -1, :].reshape(batch_size, 2, h_size).transpose(0, 1)
+
+# 验证bidirectional_rnn_forward的正确性
+bi_rnn = nn.RNN(input_size, hidden_size, batch_first=True, bidirectional=True)
+h_prev = torch.zeros(2, batch_size, hidden_size)
+bi_rnn_output, bi_state_final = bi_rnn(input, h_prev)
+for name, parameter in bi_rnn.named_parameters():
+    print(name)
+    print(parameter)
+    
+print(bi_rnn_output, bi_state_final)
+
+custom_bi_rnn_output, custom_bi_rnn_state_final = bidirectional_rnn_forward(input, bi_rnn.weight_ih_l0, bi_rnn.weight_hh_l0,\
+                                                                            bi_rnn.bias_ih_l0, bi_rnn.bias_hh_l0, h_prev[0], \
+                         bi_rnn.weight_ih_l0_reverse, bi_rnn.weight_hh_l0_reverse, bi_rnn.bias_ih_l0_reverse, bi_rnn.bias_hh_l0_reverse,\
+                          h_prev[1])
+print(custom_bi_rnn_output, custom_bi_rnn_state_final)
+```
+
+# Long-short-term-memory(LSTM) gates
