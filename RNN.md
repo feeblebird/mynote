@@ -181,4 +181,5 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
     >   * c(t): current cell state
 * The term gate[参考](https://www.analyticsvidhya.com/blog/2022/01/the-complete-lstm-tutorial-with-implementation/)
     > LSTM uses a special theory of controlling the memorizing process. Popularly referred to as gating mechanism in LSTM, what the gates in LSTM do is, store the memory components in analog format, and make it a probabilistic score by doing point-wise multiplication using sigmoid activation function, which stores it in the range of 0–1. Gates in LSTM regulate the flow of information in and out of the LSTM cells.
+![image.png](https://s2.loli.net/2022/07/07/wLIQ93mb4E8ctz2.png)
 ## forget gate
