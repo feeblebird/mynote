@@ -208,3 +208,20 @@ To conclude, the forget gate determines which relevant information from the prio
 # LSTM code implementation
 * pytorch中lstm的公式如下
 > ![image.png](https://s2.loli.net/2022/07/07/DAX6RJTfjLkHMtd.png)
+> > 其中分别对应着不同gate的输出
+> > 
+> > x(t)表示当前timestamp的input
+> >
+> > h(t-1)表示前一个timestamp的hidden state
+> >
+> > i(t)表示**input gate中sigmoid函数**的输出
+> > 
+> > f(t)表示**forget gate**的输出
+> > 
+> > g(t)表示**input gate中tanh函数**的输出
+> > 
+> > o(t)表示**output gate中sigmoid函数**的输出
+> > 
+> > c(t)表示**cell state**的输出
+> >
+> > h(t)表示**output gate**的输出
