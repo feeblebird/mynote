@@ -176,3 +176,6 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
     >   * x(t): token(output) at timestamp t
     >   * h(t-1): previous hidden state
     >   * c(t-1): previous cell state
+    > and 2 outpus:
+    >   * h(t): updated hidden state, used for predicting the output
+    >   * c(t): current cell state
