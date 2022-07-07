@@ -62,16 +62,16 @@
 
 * Exploding Gradient Problem
 * Long Term Dependency Issue
-> Let us consider a sentence-
-> 
-> “I am a data science student and I love machine ______.”
-> 
-> We know the blank has to be filled with ‘learning’. But had there been many terms after “I am a data science student” like, “I 
-> 
-> am a data science student pursuing MS from University of…… and I love machine ______”.
-> 
-> This time, however, RNNS fails to work. Likely in this case we do not need unnecessary information like “pursuing MS from 
->
-> University of……”. What LSTMs do is, leverage their forget gate to eliminate the unnecessary information, which helps them 
->
-> handle long-term dependencies.
+    > Let us consider a sentence-
+    > 
+    > “I am a data science student and I love machine ______.”
+    > 
+    > We know the blank has to be filled with ‘learning’. But had there been many terms after “I am a data science student” like, “I 
+    > 
+    > am a data science student pursuing MS from University of…… and I love machine ______”.
+    > 
+    > This time, however, RNNS fails to work. Likely in this case we do not need unnecessary information like “pursuing MS from 
+    >
+    > University of……”. What LSTMs do is, leverage their forget gate to eliminate the unnecessary information, which helps them 
+    >
+    > handle long-term dependencies.
