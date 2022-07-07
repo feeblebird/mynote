@@ -198,7 +198,7 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 * The network has enough information from the forget gate and input gate. The next step is to decide and store the information from the new state in the cell state. The previous cell state C(t-1) gets multiplied with forget vector f(t). If the outcome is 0, then values will get dropped in the cell state. Next, the network takes the output value of the input vector i(t) and performs point-by-point addition, which updates the cell state giving the network a new cell state C(t).
 ## output gate
 ![image.png](https://s2.loli.net/2022/07/07/vr5CWIF4RdO1KxU.png)
-* The output gate determines the value of the next hidden state. This state contains information on previous inputs.
+* **The output gate determines the value of the next hidden state.** This state contains information on previous inputs.
 
   First, the values of the current state and previous hidden state are passed into the third sigmoid function. Then the new cell state generated from the cell state is passed through the tanh function. Both these outputs are multiplied point-by-point. Based upon the final value, the network decides which information the hidden state should carry. This hidden state is used for prediction.
 
