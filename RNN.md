@@ -225,3 +225,9 @@ To conclude, the forget gate determines which relevant information from the prio
 > > c(t)表示**cell state**的输出
 > >
 > > h(t)表示**output gate**的输出
+> 
+> h(t)就是LSTM的输出
+>
+> 下标是t-1的就是我们使用LSTM时需要设置的初始状态
+> , RNN中我们需要设置h(0)，LSTM中我们还需要设置c(0)
+> 
