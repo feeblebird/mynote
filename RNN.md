@@ -205,3 +205,6 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 Finally, the new cell state and new hidden state are carried over to the next time step.
 
 To conclude, the forget gate determines which relevant information from the prior steps is needed. The input gate decides what relevant information can be added from the current step, and the output gates finalize the next hidden state.
+# LSTM code implementation
+* pytorch中lstm的公式如下
+> ![image.png](https://s2.loli.net/2022/07/07/DAX6RJTfjLkHMtd.png)
