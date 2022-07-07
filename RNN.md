@@ -202,6 +202,6 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 
   First, the values of the current state and previous hidden state are passed into the third sigmoid function. Then the new cell state generated from the cell state is passed through the tanh function. Both these outputs are multiplied point-by-point. Based upon the final value, the network decides which information the hidden state should carry. This hidden state is used for prediction.
 
-  Finally, the new cell state and new hidden state are carried over to the next time step.
+Finally, the new cell state and new hidden state are carried over to the next time step.
 
-  To conclude, the forget gate determines which relevant information from the prior steps is needed. The input gate decides what relevant information can be added from the current step, and the output gates finalize the next hidden state.
+To conclude, the forget gate determines which relevant information from the prior steps is needed. The input gate decides what relevant information can be added from the current step, and the output gates finalize the next hidden state.
