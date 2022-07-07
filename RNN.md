@@ -185,3 +185,11 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 ## forget gate
 ![image.png](https://s2.loli.net/2022/07/07/O6mPFfLTreC9Mlv.png)
 * The forget gate decides which information needs attention and which can be ignored. The information from the current input X(t) and hidden state h(t-1) are passed through the sigmoid function. Sigmoid generates values between 0 and 1. It concludes whether the part of the old output is necessary (by giving the output closer to 1). This value of f(t) will later be used by the cell for point-by-point multiplication.
+    > 这里说 It concludes whether the part of the old output is necessary (by giving the output closer to 1). 从图片里面的公式来看，sigmoid函数的输入是h(t-1)和x(t)的拼接，然后输出sigmoid函数的值。我觉得这里的old output是c(t-1)。
+## input gate
+![image.png](https://s2.loli.net/2022/07/07/AHjry7bJa82Lq5B.png)
+* The input gate performs the following operations to update the cell status.
+
+First, the current state X(t) and previously hidden state h(t-1) are passed into the second sigmoid function. The values are transformed between 0 (important) and 1 (not-important).
+
+Next, the same information of the hidden state and current state will be passed through the tanh function. To regulate the network, the tanh operator will create a vector (C~(t) ) with all the possible values between -1 and 1. The output values generated form the activation functions are ready for point-by-point multiplication.
