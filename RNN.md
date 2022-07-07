@@ -162,4 +162,5 @@ custom_bi_rnn_output, custom_bi_rnn_state_final = bidirectional_rnn_forward(inpu
 print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 ```
 
-# Long-short-term-memory(LSTM) gates
+# Long-short-term-memory(LSTM)
+* [参考](https://www.pluralsight.com/guides/introduction-to-lstm-units-in-rnn)LSTM primarily solves the vanishing gradient problem in backpropagation. LSTMs use a gating mechanism that controls the memoizing process. Information in LSTMs can be stored, written, or read via gates that open and close. These gates store the memory in the analog format, implementing element-wise multiplication by sigmoid ranges between 0-1. Analog, being differentiable in nature, is suitable for backpropagation.
