@@ -32,13 +32,13 @@
     * GRU (Cho, K., B. van Merriënboer, C. Gulcehre, D. Bahdanau, F. Bougares et al., 2014 Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP) 1724–1734. 10.3115/v1/D14-1179 https://www.aclweb.org/anthology/D14-1179)
     > LSTM和GRU解决了Vanilla RNN梯度消失的问题，总的来说，LSTM和GRU通过加法而不是乘法来计算前层中的权重/偏差更新，这样的话架构就能避免梯度消失的问题。
 
-# RNN模型分类
+# RNN模型分类[参考](https://www.bilibili.com/video/BV13i4y1R7jB/?spm_id_from=333.788&vd_source=6942082806aa0c4d4198eb27bcd0681a)
 * 三种类别
     * 单向循环
     * 双向循环
     > ![image.png](https://s2.loli.net/2022/07/06/VvcyJSBnoDzw1Gs.png)
     * 多层单向或双向叠加(Deep RNN)
-# RNN优点
+# RNN优点[参考](https://www.bilibili.com/video/BV13i4y1R7jB/?spm_id_from=333.788&vd_source=6942082806aa0c4d4198eb27bcd0681a)
 * RNN每个时刻的权重都是相同的，这样才能够处理变长序列
 * 模型大小与序列长度无关
 * 计算量与序列长度成线性关系，而不是平方关系
@@ -77,3 +77,5 @@
     > University of……”. What LSTMs do is, leverage their forget gate to eliminate the unnecessary information, which helps them 
     >
     > handle long-term dependencies.
+
+# Long-short-term-memory(LSTM)
