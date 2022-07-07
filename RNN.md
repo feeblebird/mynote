@@ -183,3 +183,5 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
     > LSTM uses a special theory of controlling the memorizing process. Popularly referred to as gating mechanism in LSTM, what the gates in LSTM do is, store the memory components in analog format, and make it a probabilistic score by doing point-wise multiplication using sigmoid activation function, which stores it in the range of 0–1. Gates in LSTM regulate the flow of information in and out of the LSTM cells.
 ![image.png](https://s2.loli.net/2022/07/07/wLIQ93mb4E8ctz2.png)
 ## forget gate
+![image.png](https://s2.loli.net/2022/07/07/O6mPFfLTreC9Mlv.png)
+* The forget gate decides which information needs attention and which can be ignored. The information from the current input X(t) and hidden state h(t-1) are passed through the sigmoid function. Sigmoid generates values between 0 and 1. It concludes whether the part of the old output is necessary (by giving the output closer to 1). This value of f(t) will later be used by the cell for point-by-point multiplication.
