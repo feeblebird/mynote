@@ -78,7 +78,7 @@
     >
     > handle long-term dependencies.
 
-# 单向简单rnn和双向简单rnn的代码实现
+# 单向简单rnn和双向简单rnn的代码实现(代码在jupyter notebook)
 ```python
 import torch
 import torch.nn as nn
