@@ -173,6 +173,6 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 # Gates in LSTM cells
 * The term cell[参考](https://www.analyticsvidhya.com/blog/2022/01/the-complete-lstm-tutorial-with-implementation/)
     > every unit of the LSTM network is known as a `cell`. each cell is composed of 3 inputs:
-    >   * x(t): token at timestamp t
+    >   * x(t): token(output) at timestamp t
     >   * h(t-1): previous hidden state
     >   * c(t-1): previous cell state
