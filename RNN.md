@@ -169,3 +169,10 @@ print(custom_bi_rnn_output, custom_bi_rnn_state_final)
     > sigmoid function maintains the values between 0 and 1. It helps the network to update or forget the data. If the multiplication results in 0, the information is considered forgotten. Similarly, the information stays if the value is 1.
     >
     > This will help the network learn which data can be forgotten and which data is important to keep.
+
+# Gates in LSTM cells
+* The term cell[参考](https://www.analyticsvidhya.com/blog/2022/01/the-complete-lstm-tutorial-with-implementation/)
+    > every unit of the LSTM network is known as a `cell`. each cell is composed of 3 inputs:
+    >   * x(t): token at timestamp t
+    >   * h(t-1): previous hidden state
+    >   * c(t-1): previous cell state
