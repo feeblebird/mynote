@@ -59,6 +59,7 @@
 >   > 
 >   > ![image.png](https://s2.loli.net/2022/07/06/CedFpPmLXzRnuEs.png)
 >   > ![image.png](https://s2.loli.net/2022/07/06/ZnJFh9ekXrDoMQ5.png)
+>   > 
 >   > [参考网站](https://www.superdatascience.com/blogs/recurrent-neural-networks-rnn-the-vanishing-gradient-problem)
 
 * Exploding Gradient Problem
