@@ -233,3 +233,5 @@ To conclude, the forget gate determines which relevant information from the prio
 ## lstmp
 * pytorch的lstm的初始化参数中有一个参数是`proj_size`
     > 如果这个参数的值大于零，那么lstm就变成了lstmp，因为lstm的计算量太大了，所以lstmp对减少了计算量，它对h(t)的计算进行了压缩
+    >
+    > 如果设置了`proj_size`，那么hidden state的size就变成了`proj_size`的数值
