@@ -161,6 +161,8 @@ custom_bi_rnn_output, custom_bi_rnn_state_final = bidirectional_rnn_forward(inpu
                           h_prev[1])
 print(custom_bi_rnn_output, custom_bi_rnn_state_final)
 ```
+* 现在pytorch中RNN的公式：
+    > ![image.png](https://s2.loli.net/2022/07/08/FyfI17oUscwPGid.png)
 
 # Long-short-term-memory(LSTM)
 * [参考](https://www.pluralsight.com/guides/introduction-to-lstm-units-in-rnn)LSTM primarily solves the vanishing gradient problem in backpropagation. LSTMs use a gating mechanism that controls the memoizing process. Information in LSTMs can be stored, written, or read via gates that open and close. These gates store the memory in the analog format, implementing element-wise multiplication by sigmoid ranges between 0-1. Analog, being differentiable in nature, is suitable for backpropagation.
