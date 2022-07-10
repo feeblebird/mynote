@@ -14,3 +14,6 @@
 * 非参注意力池化层
 ![image.png](https://s2.loli.net/2022/07/10/z8a3Q2Mm1hGypcr.png)
     * 这里就是key-value对
+    * 平均池化是最简单的方案：f(x) = 将所有y值平均
+        > f(x)的x就是我们的query，这里是不管query是啥，直接将所有value做均值返回
+    
