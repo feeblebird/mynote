@@ -12,5 +12,5 @@
         * 每个输入是一个值(value)和不随意线索(key)的对(pair)
         * 通过注意力池化层会根据query来有偏向地选择某些输入
 * 非参注意力池化层
-![image.png](https://s2.loli.net/2022/07/10/qkcQwYKHS5MfUPv.png)
+![image.png](https://s2.loli.net/2022/07/10/z8a3Q2Mm1hGypcr.png)
     * 这里就是key-value对
